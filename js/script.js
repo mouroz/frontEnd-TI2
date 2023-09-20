@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const botaoEntrar = document.getElementById("botaoCadastrar");
 
