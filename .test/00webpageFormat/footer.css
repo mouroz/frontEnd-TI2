@@ -1,0 +1,15 @@
+footer {
+    background-color: #F5F5F5;
+}
+
+/* Remove margin and padding from the footer element */
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove margin and padding from the ul element within the footer */
+footer ul {
+    margin: 0;
+    padding: 0;
+}

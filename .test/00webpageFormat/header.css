@@ -1,0 +1,29 @@
+.navbar{
+    background-color: #F5F5F5;
+    padding: 10px 0; /* Add padding to the top and bottom of the navbar */
+}
+
+#barraNavegacao .navbar-nav .nav-link {
+    color: white;
+}
+
+
+#barraNavegacao .navbar-brand {
+    color: white;
+    padding: 0 30px; /* Distance between corners */
+}
+
+
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-nav li {
+    margin-bottom: 10%; /* Bigger navbar */
+}
+#navbarDimensions{
+    padding: 0 3%;
+}
+
