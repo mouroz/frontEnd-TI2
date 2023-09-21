@@ -17,25 +17,11 @@
 }
 
 
-.expand-on-hover {
-    transition: transform 0.3s; /* Add a smooth transition effect */
-}
-
-.expand-on-hover:hover {
-    transform: scale(1.2); /* Scale the image to 1.2 times its original size on hover */
-
-}
-
 .completed {
     position: relative;
     border: 5px solid red; 
     border-radius: 50%; /* Make it a circle */
     overflow: hidden;
-}
-/* Style the anchor link (optional) */
-.rounded-circle-container a {
-    text-decoration: none;
-    color: inherit; /* Inherit the color from the parent element */
 }
 
 .row {

@@ -19,8 +19,11 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/perfil.css">
+    <link rel="stylesheet" href="/css/pagina-principal.css">
+    <link rel="stylesheet" href="/css/lib/return-arrow.css">
 
-    
+
     <!--JAVASCRIPTS WITH 'defer' (only executed after content loaded)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
@@ -35,6 +38,7 @@
 
 
 <header>
+    
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid" id="navbarDimensions">
@@ -65,10 +69,64 @@
 </header>
 
 <body>
+ 
     <div class="container">
-        <h1>>Hello World</h1>
+           
+        <!--profileBox will create the background-->
+        <div class="container mt-5 profileBox">
+            <!--spacing from profileBox done with container and pt-4-->
+            <div class="container profileField row">
+                <div class="return-arrow">
+                    <a href="/outras/pagina-principal.html"><i class="fas fa-arrow-left"></i></a>
+                </div>
+                <!--Sidebar left-->
+                <div class="col-3">
+                    <div class="rounded-circle-container profilePicture">
+                        <a href="#">
+                            <img alt="avatar1" src="/imagens/card-pgPrincipal/perfil.png">
+                        </a>
+                    </div>
+                    <div class="mt-5"></div>
+
+                    <!--where text begins-->
+                    <div class = "sidebar">
+                        <h3 class = "">Nome Sobrenome</h3>
+                        <p class="streak"><b>6</b> <i class="fas fa-fire"></i> </p>
+
+                        <div class="mt-5"></div>
+
+                        <h5 class = "clickable pageOn">Informacoes gerais</h5>
+                        <h5 class = "clickable pageOff">Sobre mim</h5>
+                        <h5 class = "clickable pageOff">Plano</h5>
+                        <h5 class = "clickable pageOff">Conta</h5>
+                    </div>
+                    
+                   
+                </div>
+
+                <!--lazy divisor with bootstrap-->
+                <div class="col-2"></div>
+                <div class="col profileDetails">
+                    <!--Needs better font-->
+                    <h2>Performance da Trilha</h2>
+                    <img src="/imagens/profile/basic-graph.png">
+                    <!--Ill temporarily use href to display the email link formart-->
+                </div>
+            </div>
+        </div>
+
+
         <!--For now container here could help, but not defined practice-->
     </div>
+
+    <script>
+        // JavaScript to handle the click event
+        document.getElementById("myClickableText").addEventListener("click", function() {
+          // You can perform an action when the text is clicked
+          alert("You clicked the text!");
+        });
+      </script>
+
 </body>
 
 <!--footer based on bootstrap standart ones-->

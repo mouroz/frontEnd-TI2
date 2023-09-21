@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/trilha.css">
+    <link rel="stylesheet" href="/css/lib/hover-expand.css">
+    <link rel="stylesheet" href="/css/lib/return-arrow.css">
 
     <!--JAVASCRIPTS WITH 'defer' (only executed after content loaded)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -68,7 +70,10 @@
     <!--gamified method with cards -> goal is to try to look like duolingo but this is too crude for that-->
     <!--idea goes as follows -> rows of 1 - 3 images. They are 'greyed out of not completed'-->
     <div class="container mt-5">
-        <!---->
+        <div class="return-arrow">
+            <a href="/outras/pagina-principal.html"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <!--row-->
         <div class="row justify-content-center mt-3">
             <div class="col-2">
                 <div class="rounded-circle-container">
@@ -81,6 +86,7 @@
             </div>
         </div>
 
+        <!--row-->
         <div class="row justify-content-center mt-3">
             <div class="col-2">
                 <div class="rounded-circle-container">
@@ -102,6 +108,7 @@
             </div>
         </div>
 
+        <!--row-->
         <div class="row justify-content-center mt-3">
             <div class="col-2">
                 <div class="rounded-circle-container">
@@ -131,6 +138,8 @@
                 <p class="trilhaTitle"><b>Atividade</b></p>
             </div>
         </div>
+
+        <!--row-->
         <div class="row justify-content-center mt-3">
             <div class="col-2">
                 <div class="rounded-circle-container completed">

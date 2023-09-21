@@ -5,26 +5,20 @@
     object-fit: cover;
 }
 
-.expand-on-hover {
-    transition: transform 0.3s; /* Add a smooth transition effect */
-}
-
-.expand-on-hover:hover {
-    transform: scale(1.2); /* Scale the image to 1.2 times its original size on hover */
-
+/*Organize text inside cards*/
+.streak-card {
+    font-size : 25px;
 }
 
 .fa-fire {
     color: red;
 }
 
-.streak-card {
-    font-size : 25px;
-}
 .streak-display {
     text-align: right;
 }
 
+/*Since <a> couldnt be used for the cards, this css alows the mouse to turn into a pointer when over card*/
 .card {
     cursor: pointer;
 }
