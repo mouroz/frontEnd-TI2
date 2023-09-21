@@ -12,22 +12,23 @@
     object-fit: cover; /* Maintain the aspect ratio and cover the entire container */
 }
 
-.expand-on-hover {
-    transition: transform 0.3s; /* Add a smooth transition effect */
-}
 .trilhaTitle {
     font-size: large;
 }
+
+
+.expand-on-hover {
+    transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
 .expand-on-hover:hover {
     transform: scale(1.2); /* Scale the image to 1.2 times its original size on hover */
 
-
 }
+
 .completed {
     position: relative;
-    width: 200px; /* Adjust the width and height as needed */
-    height: 200px;
-    border: 5px solid red; /* Add a yellow border */
+    border: 5px solid red; 
     border-radius: 50%; /* Make it a circle */
     overflow: hidden;
 }

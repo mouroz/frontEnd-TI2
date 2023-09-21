@@ -1,0 +1,30 @@
+.card img {
+    height:200px;
+    padding-top:20px;
+    width: auto;
+    object-fit: cover;
+}
+
+.expand-on-hover {
+    transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+.expand-on-hover:hover {
+    transform: scale(1.2); /* Scale the image to 1.2 times its original size on hover */
+
+}
+
+.fa-fire {
+    color: red;
+}
+
+.streak-card {
+    font-size : 25px;
+}
+.streak-display {
+    text-align: right;
+}
+
+.card {
+    cursor: pointer;
+}
