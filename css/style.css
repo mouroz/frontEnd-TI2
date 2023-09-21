@@ -24,6 +24,10 @@ body{
     text-align: center;
     margin: 5%;
 }
+.label-with-spacing {
+    margin-left: 10px; /* spacing for email and senha forms */
+}
+
 
 @media (max-width: 767px) {
     body{
