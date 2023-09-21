@@ -1,3 +1,5 @@
+/*THIS CSS CAN ONLY AFFECT FOOTERS - CHANGES NEEDED TO .CONTAINER OR SO ON ARE TO BE SENT TO STYLE*/
+
 footer {
     background-color: #F5F5F5;
 }
@@ -5,6 +7,7 @@ footer {
 /* Remove margin and padding from the footer element */
 footer {
     margin: 0;
+    margin-top: 20px;
     padding: 0;
 }
 
@@ -13,3 +16,4 @@ footer ul {
     margin: 0;
     padding: 0;
 }
+
