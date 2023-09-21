@@ -1,20 +1,15 @@
 .navbar{
-    background-color:darkblue!important;
-    margin-right: 0%;
+    background-color: #F5F5F5;
+    /*previous bg-color: background-color:darkblue!important;*/
+    
+    padding: 10px 0; /* Bigger height */
 }
-
-#barraNavegacao .navbar-nav .nav-link {
-    color: white;
-}
-
-
-#barraNavegacao .navbar-brand {
-    color: white;
-}
-
 
 .navbar-nav {
-    margin-left: auto;
-    display: flex;
-    justify-content: flex-end;
+    margin-left: auto; /*Allows elements to divide left and right*/
 }
+
+#navbarDimensions{
+    padding: 0 3%; /*Padding between both right and left of navbar*/
+}
+
