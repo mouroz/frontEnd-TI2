@@ -20,8 +20,9 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/forum.css">
+    <link rel="stylesheet" href="/css/lib/return-arrow.css">
 
-    
+
     <!--JAVASCRIPTS WITH 'defer' (only executed after content loaded)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
@@ -67,11 +68,148 @@
 
 <body>
     <div class="container">
-        <!--NOT STARTED-->
-        <div class="container bg-light mt-4">
-            Essa paginal vai ser a mais dificil de montar, recriar um mini reddit aqui nn vai ser facil
+
+        <div class="row">
+            <!--section to the right that contains posts-->
+            <div class="container postSection circular-container bg-light mt-4 col-8 pb-3">
+
+                <!--divisor-->
+                <div class="pt-4"></div>
+
+                <!--post-->
+                <div class="container post mg-4">
+                    <!--user data-->
+                    <div class="row user-data">
+                        <div class="col">
+                            <img src="/imagens/card-pgPrincipal/perfil.png">
+                            username
+                            -
+                            <i>3 dias atras</i>
+                        </div>
+
+                        <div class="col text-end"><i class="fa-solid fa-gear"></i></div>
+                    </div>
+
+                    <!--title-->
+                    <div class="title mt-2">
+                        <h4>Post title FAQ</h4>
+                    </div>
+
+                    <!--tag-->
+                    <div class="tag circular-container bg-danger">
+                        announcements
+                    </div>
+
+                    <!--description-->
+                    <div class="description mt-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis excepturi commodi labore deleniti
+                        iusto, porro mollitia quia facilis maiores cumque architecto, dicta nesciunt laboriosam nisi
+                        eligendi reiciendis fugit ea praesentium? Ipsam fugit quo eos rerum ab? Possimus, tenetur eos
+                        error
+                        laborum necessitatibus ut harum porro voluptates doloremque doloribus quo corrupti.
+                    </div>
+
+                    <!--like/comment-->
+                    <div class="mt-3 row like-comment">
+                        <div class="col-1 circular-container">
+                            20
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="col-1 circular-container">
+                            30
+                            <i class="fa-regular fa-comment "></i>
+                        </div>
+                    </div>
+                </div>
+                <!--endpost-->
+
+                
+
+                
+            </div>
+            <!--Forum will be organized by row containing name, like and comment-->
+            <div class="col-3 sidebarSection mt-4">
+
+                <div id="Forum-dados" class="bg-light circular-container bg-light">
+                    <h4 class="text-center pt-3">Forum</h4>
+
+                    <p class="sidebar-spacing online-count online-count-num mt-5"><b>10</b></p>
+                    <p class="sidebar-spacing online-count online-count-text"><i class="fa-solid fa-circle"></i> online</p>
+                    <p class="sidebar-spacing mt-5"><b>Regras da comunidade</b></p>
+                    <div class="accordion mt-3 pb-3" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Rule #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Rule #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Rule #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Filtro" class="mt-4 circular-container bg-light">
+                    <h4 class="text-center pt-3">Busca</h4>
+                    
+                    <p class="sidebar-spacing pb-3">Inserir metodos busca e filtro</p>
+
+                </div>
+
+            </div>
+
         </div>
-        <!--For now container here could help, but not defined practice-->
+    </div>
+    <!--For now container here could help, but not defined practice-->
+    </div>
     </div>
 </body>
 
