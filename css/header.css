@@ -1,9 +1,14 @@
 /*THIS CSS CAN ONLY AFFECT HEADERS - CHANGES NEEDED TO .CONTAINER OR SO ON ARE TO BE SENT TO STYLE*/
 
+
+#navbarDimensions {
+    padding: 0;
+}
+
 .navbar{
-    background-color: #F5F5F5;
-    /*previous bg-color: background-color:darkblue!important;*/
-    
+    background-color: beige!important;
+    /*previous bg-color: background-color  :darkblue!important;*/
+
     padding: 10px 0; /* Bigger height */
 }
 
@@ -13,5 +18,6 @@
 
 #navbarDimensions{
     padding: 0 3%; /*Padding between both right and left of navbar*/
+
 }
 
