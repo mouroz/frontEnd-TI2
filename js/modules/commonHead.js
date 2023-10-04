@@ -46,13 +46,6 @@ bootstr1.crossOrigin = "anonymous";
 bootstr1.defer = true;
 document.head.appendChild(bootstr1);
 
-const bootstr2 = document.createElement("script");
-bootstr2.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"; 
-bootstr2.integrity = "sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+";
-bootstr2.crossOrigin = "anonymous";
-bootstr2.defer = true;
-document.head.appendChild(bootstr2);
-
 const popperjs = document.createElement("script");
 popperjs.src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"; 
 popperjs.integrity = "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r";
