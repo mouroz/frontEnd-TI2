@@ -11,13 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     window.location.href = "/outras/perfil/perfil.html";
                     break;
                 case "Sobre mim":
-                    window.location.href = "/outras/perfil/perfil.html";
+                    window.location.href = "/outras/perfil/sobremim.html";
                     break;
                 case "Plano":
-                    window.location.href = "/outras/perfil/perfil.html";
-                    break;
-                case "Conta":
-                    window.location.href = "/outras/perfil/perfil.html";
+                    window.location.href = "/outras/perfil/plano.html";
                     break;
                 default:
                     break;
