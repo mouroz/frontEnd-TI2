@@ -15,10 +15,13 @@
 .tag {
     display: inline-block;
     padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left:4px;
     color:white;
 }
 
-.postSection{
+#posts-section{
     margin-right: 20px;
 }
 
@@ -32,7 +35,7 @@
 .like-comment {
     margin-left:4px;
 }
-.user-data img{
+.post-user-display img{
     height: 50px;
     width: 50px;
     
@@ -45,10 +48,10 @@
 .circular-container {
     border-radius:20px;
 }
-sidebarSection {
+#sidebar-section {
     overflow: hidden;
 }
-sidebarSection p {
+#sidebar-section p {
     margin-left:14px;
 }
 

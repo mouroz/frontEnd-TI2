@@ -1,5 +1,8 @@
 /*RETURN ARROW ON SECTION PAGES*/
-
+/*
+<div class="return-arrow">
+    <a href="/outras/telainicial.html"><i class="fas fa-arrow-left"></i></a>
+</div>*/
 .return-arrow {
     position: absolute;
     top: 0;

@@ -1,1 +1,0 @@
-[name]Get will contain scripts that will try to fetch a page value as soon as its loaded

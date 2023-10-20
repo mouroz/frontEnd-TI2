@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="/css/lib/return-arrow.css">
 
     <!--JS-->
-    <!--scripts that use customErrors or other classes need module-->
-    <script src="/js/fetch/forumBuilder.js" defer></script> 
+    <script src="/js/fetch/forumPageBuilder.js"defer></script>
 </head>
 
 <body>
@@ -29,7 +28,45 @@
         <div class="row">
             <!--section to the right that contains posts-->
             <div id="posts-section" class="container circular-container bg-light mt-4 pt-3 col-8">
-                <!--built on js-->
+                <div class="container mg-4">
+                    <!--user data-->
+                    <div class="row">
+                        <div class="post-user-display col">
+                            <img src="/imagens/card-pgPrincipal/perfil.png">
+                            <span id="post-username">username</span>
+                            -
+                            <i id="post-age">4 dias tras</i>
+                        </div>
+                    
+                        <div class="col text-end"><i class="fa-solid fa-gear"></i></div>
+                    </div>
+                    
+                    <!--title-->
+                    <h4 id="post-title" class="mt-2">TIIIIITLE</h4>
+               
+                    
+                    <!--tag-->
+                    <div id="tag-container">
+                        <div class="tag circular-container bg-danger">important</div>
+                    </div>
+                    
+                    <!--text-->
+                    <div id="post-description" class="mt-3">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate eaque temporibus saepe delectus perferendis, odio in praesentium maiores laudantium dolor quam modi quibusdam mollitia cupiditate quae. Porro officiis delectus adipisci dolores! Ipsum quisquam minus accusantium exercitationem quis eos, rem totam expedita omnis dolor adipisci quas iure magni atque perferendis similique ut nam nulla esse, modi maiores. Enim placeat nesciunt atque impedit quisquam? Eligendi eaque nesciunt pariatur nam! Quaerat nisi architecto dignissimos odio cum, amet fugit. Illum amet doloribus doloremque tempore asperiores itaque modi? Aut quas earum obcaecati suscipit adipisci, voluptate nemo ipsam! Eaque fugiat nulla soluta debitis aspernatur? Iusto, commodi.
+                    </div>
+                    
+                    <!--like/comment-->
+                    <div class="mt-3 row like-comment">
+                        <div class="col-1 circular-container">
+                            <span id="likes-num">50</span>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="col-1 circular-container">
+                            <span id="comments-num">30</span> 
+                            <i class="fa-regular fa-comment "></i>
+                        </div>
+                    </div>
+                    </div>
             </div>
 
             <!--Right sidebar-->

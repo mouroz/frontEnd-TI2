@@ -1,11 +1,5 @@
-
-///MODULATES THE PAGE HEADER (FOR WHEN YOU ARENT LOGGED IN)
-
-document.addEventListener("DOMContentLoaded", function () {
-    const newHeader = document.createElement("header");
-
-    // Create content for the new header
-    newHeader.innerHTML = `
+const headerHtml =
+`
 <!--HEADER USED FOR UNLOGGED WEBSITE-->
 <div class="websiteHeader"></div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,18 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li class="nav-item mb-2">
                     <a class="nav-link" href="#">Pricing</a>
                 </li>
-                <li class="nav-item mb-2">
-                    <a class="nav-link" href="#"><i class="fa fa-user-circle"></i>Entrar</a>
-                </li>
             </ul>
         </div>
     </div>
 </nav>
-`
-    //newHeader.classList.add("container")
-    //option for header to not fill the top
+`;
 
+///MODULATES THE PAGE HEADER (FOR WHEN YOU ARENT LOGGED IN)
+document.addEventListener("DOMContentLoaded", function () {
+    const newHeader = document.createElement("header");
 
+    // Create content for the new header
+    newHeader.innerHTML = headerHtml;
+
+    
     //gets first child of body and inserts header before it
     document.body.insertBefore(newHeader, document.body.firstElementChild);
 });
