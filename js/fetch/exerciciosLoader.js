@@ -1,21 +1,53 @@
+///DEFINED CONSTANTS
 const defaultJson = {
     //type -> type is a placeholder for future use of other types of exercices if needed
     //for alternatives correct holds values 1 -> 5
-    title: 'Placeholder 1', type: 0, text: 'my description is this', correct: '1',
+    title: 'Placeholder 1', 
+    text: 'my description is this', 
+    type: 0, 
     alternatives: [
         "alternative1", "alternative2", "alternative3", "alternative4", "alternative5"
-    ]
+    ],
+    correct: '1'
+}
+const userSessionStorageName = 'userData';
+
+///GLOBAL METHODS
+function getUserSessionStorage(){
+    const existingSS = sessionStorage.getItem(userSessionStorageName);
+    if (existingData != null) console.error('Couldnt access sessionStorage data')
+
+    const ss_Json = JSON.parse(existingSS);
+    if (!ss_Json.ok) console.error('Couldnt access SessionStorage as JSON');
+
+    return ss_Json;
 }
 
-///FETCH
-function fetchNewExercise() {
-    const currentUrl = window.location.href;
-    const url = new URL(currentUrl);
-    const urlValue = url.pathname.split('/').pop();
+///START FOR GLOBALS
+//Url has as parameters current trilha and difficulty. 
+    //UserId is gotten from the ss
+const url = new URL(window.location.href);
+const trilha = url.searchParams.get('param1');
+const difficulty = url.searchParams.get('param2'); 
+console.log("exerciciosLoader.js url values found: " + trilha + ", " + difficulty);
 
-    console.log("url fetch value specifier: "+urlValue); //debug results
+const userSS = getUserSessionStorage();
+const user = userSS.payload.user; //get unique key user from JSON
+if (user == null || user == '') console.error('Couldnt access user key');  
 
-    fetch(`/api/getExercise/${urlValue}`) 
+///LOCAL START
+fetchNewExercise(); //fetch new as soon as page starts
+
+//------------------------------------------------------------------------------------------
+///FETCH GET
+function fetchNewExercise() {   
+    //This fetch will only accept exercicios that use alternativas for now
+    //There are also no dividers for filtering (completed) or (not completed) 
+        //and the code is default to the 2nd
+
+    fetch(`/get/exercicios?${user}&${trilha}&${difficulty}`, ({
+        method: 'GET'
+    })
         .then(response => {
             if (!response.ok) throw new Error('API request failed with status ' + response);
             return response.json();
@@ -44,10 +76,53 @@ function fetchNewExercise() {
             if (defaultJson){ //reserved for if function starts receiving default as param
                 updateExercicios(defaultJson);
             }
-        });
+        }));
 }
 
-fetchNewExercise(); //fetch new as soon as page starts
+///FETCH POST
+function fetchPost() {
+    console.log("url fetch value specifier: "+urlValue); //debug results
+
+    fetch('/put/acerto/', ({
+        method: "POST", // You can use GET or POST, depending on your server's implementation.
+        body: JSON.stringify(serverRequestData),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+
+        .then(response => {
+            if (!response.ok) throw new Error('API request failed with status ' + response);
+            return response.json();
+        })
+        .then(datajson => {
+            console.log(datajson);
+
+            if (!('title' in datajson)) throw new Error('Failure in atribute (title) on Exercicio JSON');
+            if (!('type' in datajson)) throw new Error('Failure in atribute (type) on Exercicio JSON');
+            if (!('text' in datajson)) throw new Error('Failure in atribute (text) on Exercicio JSON');
+            if (!('correct' in datajson)) throw new Error('Failure in atribute (correct) on Exercicio JSON');
+
+            //Handle invalid values
+            if (datajson.type != 0) throw new Error('Script doesnt support other types aside from 0');
+            
+            if (datajson.type == 0 && datajson.alternatives.length > 5) 
+            throw new Error('Amount of alternatives exceeds maximum size of 5 for type = 0');
+            
+            if (datajson.type == 0 && datajson.correct <= 0 || datajson.correct > 5) 
+            throw new Error('Incorrect correct alternative range for type = 0');
+
+            updateExercicios(datajson);
+        })
+        .catch(error => {
+            console.error('exerciciosLoader.js error:', error + '\n' + 'getting default values');
+            if (defaultJson){ //reserved for if function starts receiving default as param
+                updateExercicios(defaultJson);
+            }
+        }));
+}
+
+
 
 ///FIXED ELEMENTS
 const form = document.getElementById("question-form");
