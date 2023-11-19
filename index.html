@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NeuroNerds</title>
 
-    <!--COMMON MODULES-->
-    <!--includes all bootstrap, fontawesome and common website css-->
-    <script src="/js/modules/commonHead.js"></script>
-    <script src="/js/modules/pageHeader.js"></script>
-    <script src="/js/modules/footer.js"></script>
+    <!--includes external libraries-->
+    <script src="/js/common-head.js"></script>
 
-    <!--SITE CSS-->
-    <link rel="stylesheet" href="/css/index.css">
+    <!--renders header and footer-->
+    <script type="module" src="./js/webpage-initial-render.js"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!--JS-->
-    <script type="module" src="js/fetch/loginAuth.js" defer></script>
+    <script type="module" src="./js/login-authentication.js" defer></script>
 
 </head>
-
-<header></header>
-<!--HEADER ADDED DYNAMICALLY WITH THIS JS. DONT DELETE HEADER PLACEHOLDER-->
-
 
 
 <body>
@@ -49,7 +48,7 @@
                                     <button class="btn btn-secondary btn-lg" type="submit">Entrar</button>
                                 </div>
                                 <div class="col" id="botao-cadastrar">
-                                    <a class="btn btn-secondary btn-lg" href="/outras/cadastro.html" role="button">Criar conta</a>
+                                    <a class="btn btn-secondary btn-lg" href="./pages/cadastro.html" role="button">Criar conta</a>
                                 </div>
                             </div>
                         </form>
@@ -66,7 +65,7 @@
             <!--1-->
             <div class="col" id="quote1">
                 <div class="card mx-auto" style="width: 18rem;"> <!--mx-auto here allows center alignment-->
-                    <img src="./imagens/card-pgInicial/einstein.jpeg" class="card-img-top" alt="...">
+                    <img src="./images/card-pgInicial/einstein.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <blockquote class="blockquote">
                             <p>Todo mundo é um gênio. Mas se você julgar um peixe por sua capacidade de subir em uma
@@ -82,7 +81,7 @@
             <!--2-->
             <div class="col" id="quote2">
                 <div class="card mx-auto" style="width: 18rem;">
-                    <img src="./imagens/card-pgInicial/buddha.jpeg" class="card-img-top" alt="...">
+                    <img src="./images/card-pgInicial/buddha.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <blockquote class="blockquote">
                             <p>É capaz quem pensa que é capaz</p>
@@ -97,7 +96,7 @@
             <!--3-->
             <div class="col" id="quote3">
                 <div class="card mx-auto" style="width: 18rem;">
-                    <img src="./imagens/card-pgInicial/gandhi.jpeg" class="card-img-top" alt="...">
+                    <img src="./images/card-pgInicial/gandhi.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <blockquote class="blockquote">
                             <p>Quem sabe concentrar-se numa coisa e insistir nela como único objetivo, obtém, ao fim e
@@ -111,4 +110,5 @@
             </div>
         </div>
     </div>
+
 </body>

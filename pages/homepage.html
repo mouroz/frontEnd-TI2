@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pagina inicial</title>
+
+    <!--includes external libraries-->
+    <script src="/js/common-head.js"></script>
+
+    <!--renders header and footer-->
+    <script type="module" src="/js/webapp-initial-render.js"></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header2.css">
+
+    <link rel="stylesheet" href="/styles/homepage.css">
+    <link rel="stylesheet" href="/css/lib/hover-expand.css">
+    <link rel="stylesheet" href="/css/lib/return-arrow.css">
+</head>
+
+
+
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="row justify-content-center">
+
+            <!--card-->
+            <div class="card col-2 expand-on-hover" onclick="window.location.href = '/pages/trilhas.html';"
+                style="width: 18rem; ">
+                <img src="/images/card-pgPrincipal/trail.jpeg" class="card-img-top" alt="...">
+                <div class="card-body streak-card">
+                    <p class="cardTitle">Trilha</p>
+                </div>
+            </div>
+
+            <div class="col-1"></div>
+
+
+            <!--card-->
+            <div class="card col-2 expand-on-hover" onclick="window.location.href = '/pages/forum-explorar.html';"
+                style="width: 18rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <img src="/images/card-pgPrincipal/forum.webp" class="card-img-top" alt="...">
+                <div class="card-body streak-card">
+                    <p class="cardTitle">Fórum</p>
+                </div>
+            </div>
+        
+            <div class="col-1"></div>
+
+
+            <!--card-->
+            <div class="card col-2 expand-on-hover" onclick="window.location.href = '/pages/perfil.html?perfil';"
+                style="width: 18rem;">
+                <img src="/images/card-pgPrincipal/perfil.png" class="card-img-top" alt="...">
+                <div class="card-body streak-card">
+                    <div class="justify-content-center">
+                        <p class="cardTitle">Meu Perfil</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
