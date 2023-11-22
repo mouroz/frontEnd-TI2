@@ -14,9 +14,9 @@ const outraImg = '/images/profile/basic-graph.png'
 
 const cardsData = 
 [
-    { title: 'Adhd Trilha',  description: 'my description is this', link: adhdExLink, image: adhdImg },
-    { title: 'Desflexia Trilha', description: 'my description is this', link: desflexiaExLink, image: desflexiaImg },
-    { title: 'outra Trilha', description: 'my description is this', link: outraExLink, image: outraImg }
+    { title: 'TDAH',  description: 'Esta é uma trilha com ênfase em TDAH, serão trabalhadas áreas como: Atenção, raciocínio e desenvolvimento', link: adhdExLink, image: adhdImg },
+    { title: 'Dislexia', description: 'my description is this', link: desflexiaExLink, image: desflexiaImg },
+    { title: 'Discaluli', description: 'my description is this', link: outraExLink, image: outraImg }
 ];
 
 
