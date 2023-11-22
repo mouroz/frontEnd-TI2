@@ -4,7 +4,7 @@ export function generateWebpageHeader() {
     <div class="websiteHeader">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid" id="navbarDimensions">
-                <a class="navbar-brand" href="/index.html">LOGO</a>
+                <a class="navbar-brand" href="/index.html">NeuroNerds!</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@ export function generateWebpageHeader() {
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item mb-2">
-                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/index.html">Página Inicial</a>
                         </li>
                         <li class="nav-item mb-2">
                             <a class="nav-link" href="#">Features</a>
