@@ -1,5 +1,8 @@
-import { getName } from "../modules/user-data.js";
+/* Script used to send comments on the forum-post page
+ */
 
+import { getName } from "../modules/user-data.js";
+import { restfulJsonPost, postPaths } from "../modules/bancoti2-fetch.js";
 
 const username = getName();
 const commentForm = document.getElementById('comment-form');
@@ -24,38 +27,13 @@ function sendComment(commentInput) {
         content: commentInput
     };
 
-    console.log(serverRequestData);
-    fetch('/forum/page-comment', {
-        method: "PUT", // You can use GET or POST, depending on your server's implementation.
-        body: JSON.stringify(serverRequestData),
-        headers: {
-            "Content-Type": "application/json"
-            //for form body there is no need for Content-Type header
-        }
-    })
-        .then(response => {
-            console.log(response.status);
-            switch (response.status) {
-                case 401:
-                    alert("Server dismissed response");
-                    break;
-                case 200:
-                    window.location.href = window.location.href; //refresh
-                    break;
-                default:
-                    alert("Unexpected response from server");
-            }
-        })
-        .catch (error => {
-            let message = 'couldnt send comment';
-            
-            alert(message);
-            console.error(message + ' ' + error.message);
-        })
-        .finally (() => {
-            commentBox.value = '';
-        })
-
+    if (!restfulJsonPost(postPaths.forumComment, serverRequestData)){
+        alert('Server couldnt send reponse. Try again later');
+        commentBox.value = '';
+    } else {
+        //reload page
+        window.location.href = window.location.href;
+    }
 
 }
 

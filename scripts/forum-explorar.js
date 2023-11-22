@@ -35,29 +35,20 @@ const defaultPostsArray = [
     }   
 }];
 const maxPostsLimit = 5;
-
 import { getForumPostPreview } from "../components/ForumPostPreview.js";
 import htmlPages from "../modules/htmlPaths.js";
-
-///FETCH
-fetch("/forum/homepage")
-    .then(response => {
-        if (!response.ok) throw new Error('API request failed with status ' + response);
-        return response.json();
-    })
-    .then(json => {
-        console.log(JSON.stringify(json));
-        updateForum(json);
-    })
-    .catch(error => {
-        console.error('forumLoader.js error: ', error + '\n' + 'getting default values');
-        updateForum(defaultPostsArray);
-    });
+import { getPaths, restfulJsonGet } from "../modules/bancoti2-fetch.js";
 
 
-
-//FIXED ELEMENTS
 const postsPreviewContainer = document.getElementById("posts-section");
+
+
+addEventListener('DOMContentLoaded', () => {
+    const serverJson = restfulJsonGet(getPaths.forumExplore);
+    
+    if (serverJson != null) updateForum(serverJson);
+    else updateForum(defaultPostsArray);
+})
 
 
 //FUNCTION ONLY HANDLES TYPE = 0 FOR NOW

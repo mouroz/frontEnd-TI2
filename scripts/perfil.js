@@ -17,47 +17,28 @@ import { createPlanos, planosDefaultJson } from "../components/profile/ProfilePl
 import { createSobremim, sobremimDefaultJson } from "../components/profile/ProfileSobremim.js";
 import htmlPages from "../modules/htmlPaths.js";
 
+import { getUsername } from "../modules/user-data.js";
+import { restfulJsonGet, getPaths} from "../modules/bancoti2-fetch.js";
+
+const username = getUsername();
 const state = window.location.search.split('?').pop();
 switch (state){
     case 'perfil':
-        fetchData('/perfil/perfil', perfil, profileDefaultJson);
+        perfil ( restfulJsonGet(getPaths.perfil, username) );
         break;
 
     case 'sobremim':
-        fetchData('/perfil/sobremim', sobremim, sobremimDefaultJson);
+        sobremim ( restfulJsonGet(getPaths.sobremim, username) );
         break;
 
     case 'plano':
-        fetchData('/perfil/plano', planos, planosDefaultJson);
+        planos ( restfulJsonGet(getPaths.plano, username) );
         break;
 
     default:
         console.error('None of the options where found, building default homepage');
         perfil(profileDefaultJson);
 
-}
-
-
-function fetchData(url, functionPointer, defaultJson){
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failure in perfil-fetch response');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (!data) {
-                throw new Error('Response data is not in JSON format');
-            }
-            functionPointer(data);
-        })
-        .catch(error => {
-            console.error(error);
-            if (defaultJson) {
-                functionPointer(defaultJson);
-            }
-        });
 }
 
 function perfil(json){

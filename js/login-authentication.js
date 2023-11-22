@@ -23,8 +23,13 @@ import htmlPages from "../modules/htmlPaths.js"
 
 const nextPageHtml = htmlPages.homepage;
 const form = document.getElementById('loginForm');
-const usernameElement = document.getElementById('username');
+const usernameElement = document.getElementById('email');
 const passwordElement = document.getElementById('password');
+
+if (form || usernameElement || passwordElement == null) {
+    console.error("One of the static essential components missing!")
+}
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault(); // Prevent default form submission

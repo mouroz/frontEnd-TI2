@@ -38,35 +38,27 @@ const defaultPostJson = {
         }
     }]
 }
+
 const maxCommentsNum = 5;
 import { getPostComments } from "../components/PostComments.js";
 import { getPostDetails } from "../components/PostDetails.js";
-
+import { restfulJsonGet, getPaths } from "../modules/bancoti2-fetch.js";
 
 const windowLocation = window.location.href;
 const windowId = windowLocation.split('?').pop();
 console.log(windowId);
 
-let path = `/forum/page/load-post?id=${windowId}`;
-fetch(path) //either this or send it by adding a body. Not sure which yet
-    .then(response => {
-        if (!response.ok) throw new Error('API request failed with status ' + response);
-        return response.json();
-    })
-    .then(json => {
-        console.log(json);
-        loadPost(json);
-    })
-    .catch(error => {
-        console.error('forumLoader.js error for ' + path + '\n' + error + '\n' + 'getting default values');
-        loadPost(defaultPostJson);
-    });
-
-function loadPost(json) {
-    loadDetails(json);
-    loadComments(json.comment);
-
-}
+addEventListener('DOMContentLoaded', () => {
+    const json = restfulJsonGet(getPaths.postDetails);
+    if (json != null) {
+        loadDetails(json);
+        loadComments(json.comment);
+    }
+    else {
+        loadDetails(defaultPostJson);
+        loadComments(defaultPostJson.comment);
+    }
+});
 
 
 
@@ -107,7 +99,6 @@ function loadComments(commentsArray) {
     }
 
     for (let i = 0; i < len; i++) {
-        
         const json = commentsArray[i];
 
         const jsonUser = json.user; 
