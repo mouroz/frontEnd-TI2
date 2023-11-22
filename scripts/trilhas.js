@@ -8,15 +8,15 @@ const desflexiaExLink = htmlPages.exercicios;
 const outraExLink = htmlPages.exercicios;
 
 //img src for each card
-const adhdImg = '/images/profile/basic-graph.png'
-const desflexiaImg = '/images/profile/basic-graph.png'
-const outraImg = '/images/profile/basic-graph.png'
+const adhdImg = '/images/profile/TDAH.webp'
+const desflexiaImg = '/images/profile/discalculia.jpeg'
+const outraImg = '/images/profile/dislexia.png'
 
 const cardsData = 
 [
     { title: 'TDAH',  description: 'Esta é uma trilha com ênfase em TDAH, serão trabalhadas áreas como: Atenção, raciocínio e desenvolvimento', link: adhdExLink, image: adhdImg },
-    { title: 'Dislexia', description: 'my description is this', link: desflexiaExLink, image: desflexiaImg },
-    { title: 'Discaluli', description: 'my description is this', link: outraExLink, image: outraImg }
+    { title: 'Dislexia', description: 'Aqui vamos trabalhar com a Dislexia, serão enfatizados conceitos como: Leitura e interpretação, análise gramatical e de sintaxe e raciocínio', link: desflexiaExLink, image: desflexiaImg },
+    { title: 'Discalculia', description: 'Esta trilha é focada em Discalculia, serão trabalhados conceitos como: Matematica básica, interpretação numérica e raciocínio', link: outraExLink, image: outraImg }
 ];
 
 
