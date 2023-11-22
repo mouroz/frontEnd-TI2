@@ -45,9 +45,12 @@ const postsPreviewContainer = document.getElementById("posts-section");
 
 addEventListener('DOMContentLoaded', () => {
     const serverJson = restfulJsonGet(getPaths.forumExplore);
-    
+
     if (serverJson != null) updateForum(serverJson);
-    else updateForum(defaultPostsArray);
+    else {
+        alert('Using mock data');
+        updateForum(defaultPostsArray);
+    }
 })
 
 

@@ -21,16 +21,23 @@ export function restfulJsonGet (path, id) {
         else return response.json();
     })
     .then (json => {
-        console.log('json obtained from ' + path);
-        console.log(json);
+        console.log(`json obtained from ${path}: ` + json);
 
         return json;
     })
     .catch (error => {
-        console.error(error);
+        console.error(path + ' -> ' + error);
 
         return null;
     })
+}
+
+export function doubleRestfulJsonGet (path, id1, id2) {
+    if (id1 != null || id2 != null) {
+        console.error('Expected 2 params for doubleRestfulJsonGet');
+    }
+    path = path + '/' + id1 + '/' + id2;
+    return restfulJsonGet(path);
 }
 
 /* General function for posting json to database
@@ -59,16 +66,17 @@ export function restfulJsonPost (path, reqJson) {
 
 // Paths that are used implemented on this method
 export const getPaths = {
-    forumExplore: '/forum/explore', //no id (for now) 
-    postDetails: '/forum/post/load', //requires id  
-    exercicios: '/exercicios', //requires id
+    forumExplore: '/forum/explore', 
+    postDetails: '/forum/post/load', //[:/id] -> pergunta id
+    exercicios: '/exercicios/load', //[/:username/:type] -> type for which trilha
 
-    perfil: '/perfil', //requires id
-    sobremim: '/perfil/sobremim', //requires id 
-    plano: '/perfil/planos' //requires id
+    perfil: '/perfil', //[/:username]
+    sobremim: '/perfil/sobremim', //[/:username] 
+    plano: '/perfil/planos' //[/:username]
 }
 
 export const postPaths = {
-    forumComment: '/forum/post/comment'
+    forumComment: '/forum/post/comment',
+    exerciciosSubmit: '/exercicios/submit'
 }
 

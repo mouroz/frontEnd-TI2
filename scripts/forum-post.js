@@ -55,6 +55,7 @@ addEventListener('DOMContentLoaded', () => {
         loadComments(json.comment);
     }
     else {
+        alert('Mock-up data');
         loadDetails(defaultPostJson);
         loadComments(defaultPostJson.comment);
     }
