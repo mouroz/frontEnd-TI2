@@ -4,7 +4,7 @@ const defaultQuestionJson = {
     type: 0, //support for extra types for later
     alternatives: [
         "alternative1", "alternative2", "alternative3", "alternative4", "alternative5"
-    ],
+    ], //max 5
     correct: '1' //index 0 - 4 for alternative
 }
 
