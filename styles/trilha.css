@@ -1,9 +1,12 @@
 
 .rounded-circle-container {
-    width: 200px; /* Set the width you want for the container */
+    width: 290px; /* Set the width you want for the container */
     height: 200px; /* Set the height you want for the container */
     overflow: hidden; /* Hide any part of the image that exceeds the container size */
     border-radius: 50%; /* Create a circular container */
+}
+.introducao {
+    text-align: center;
 }
 
 .rounded-circle-container img {
